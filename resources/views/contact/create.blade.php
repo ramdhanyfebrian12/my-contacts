@@ -1,0 +1,42 @@
+@extends('contact')
+
+@section('main')
+
+<div class="col-md-7 ">
+<br>
+        <div class="row">
+                <form action="{{url('/contact')}}"method="post">
+                @csrf  
+                    <div class ="form-group">
+                        <label for="full_name">Full Name: </label>
+                        <input class="form-control" type="text" name="full_name">
+            </div>
+            <div>
+               
+                    <div class ="form-group">
+                        <label for="phone">Phone : </label>
+                        <input class="form-control" type="text" name="phone">
+            </div>
+            <div>
+                
+                    <div class ="form-group">
+                        <label for="email">Email : </label>
+                        <input class="form-control" type="text" name="email">
+            </div>
+            <div>
+                
+                    <div class ="form-group">
+                        <label for="address">Address : </label>
+                        <textarea class="form-control" name="address"></textarea>
+            </div>
+            <br>
+            <div>
+                <button type="submit" class="btn btn-primary">Tambah Data Contact</button>
+</div>
+</form>
+</div>
+</div>
+
+
+
+@endsection
